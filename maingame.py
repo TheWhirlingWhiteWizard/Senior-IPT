@@ -1,6 +1,7 @@
 import csv
 import os
 import sys
+import random
 
 from PyQt5 import QtCore, QtGui, QtMultimedia, QtWidgets,Qt
 from PyQt5.QtMultimedia import *
@@ -85,7 +86,14 @@ class MainGame(QtWidgets.QWidget):
         self.operator_selection_widget.hide()
         self.mode_selection_widget.show()
     def draw_practice_mode(self):
-        self.practice_mode_widget = QtWidgets.QWidget()
+        self.practice_mode_widget = QtWidgets.QWidget(self)
+        self.practice_mode_label = QtWidgets.QWidget()
+        self.practice_equation_label = QtWidgets.QLabel()
+        self.practice_mode_label.setText('Practice Mode')
+        for i in range(0,101):
+            print('hello')
+        self.practice_equation_label.setText('')
+
         
 
 
